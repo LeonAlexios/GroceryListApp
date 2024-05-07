@@ -1,0 +1,68 @@
+:root {
+    --main-color: #c5d9e2;
+    --content-color: #6ba368;
+    --text-color: #3f4739;
+    --border-color-one: #9cfc97;
+    --border-color-two: #f5b700;
+}
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--text-color);
+    background-color: var(--content-color);
+}
+
+header {
+    font-size: 3em;
+    font-family: fantasy;
+    padding: 5px;
+}
+
+body {
+    text-align: center;
+}
+
+div.additem {
+    border-radius: 5px;
+    background-color: var(--border-color-one);
+    display: inline-flex;
+    padding: 10px;
+}
+
+form.itemform {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 5px;
+    padding: 5px;
+}
+
+
+form.itemform>input {
+    width: 100%;
+    border: solid;
+    font-size: larger;
+    text-align: center;
+}
+
+form.itemform>label {
+    border: .25rem solid;
+    border-radius: 5px;
+    border-color: var(--border-color-two);
+    font-size: larger;
+    padding: 5px;
+    text-align: center;
+    display: block;
+    line-height: 150%;
+}
+
+form>select {
+    padding: .5em 1em .5em 1em;
+}
+
+form>select {
+    width: 100%;
+    border: solid;
+    font-size: larger;
+}
