@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grocery List App</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
     <main>
         <header>Grocery List App</header>
-        <section>
-            <div class="container">
-                <div class="headerimage">
-                    <link href="">
-                </div>
-                <div class="additem">
-                    <form id="add-item-form" class="itemform">
-                        <label for="item-name">Name:</label>
-                        <input type="text" id="item-name" required>
-                        <label for="item-category">Category:</label>
-                        <select id="select-category">
-                            <option value="default">Select a Category</option>
-                            <option value="produce">Produce</option>
-                            <option value="dairy">Dairy</option>
-                            <option value="baking">Baking</option>
-                            <option value="grains">Grains</option>
-                            <option value="meat">Meat</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </form>
-                    <table id="grocery-list-produce" class="listtable">
-
-                    </table>
-                    <table id="grocery-list-dairy" class="listtable">
-
-                    </table>
-                    <table id="grocery-list-baking" class="listtable">
-
-                    </table>
-                    <table id="grocery-list-grains" class="listtable">
-
-                    </table>
-                    <table id="grocery-list-meat" class="listtable">
-
-                    </table>
-                    <table id="grocery-list-other" class="listtable">
-
-                    </table>
-                </div>
+        <div class="container">
+            <div class="headerimage">
+                <link href="">
             </div>
-        </section>
+            <div class="additem">
+                <form id="add-item-form" action="submit" class="itemform">
+                    <label for="item-name">Name:</label>
+                    <input type="text" id="item-name" required>
+                    <label for="item-quantity">Quantity:</label>
+                    <input type="text" id="item-quantity">
+                    <label for="item-category">Category:</label>
+                    <select id="select-category">
+                        <option value="default">Select a Category</option>
+                        <option value="produce">Produce</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="baking">Baking</option>
+                        <option value="grains">Grains</option>
+                        <option value="meat">Meat</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="submit" value="Add Grocery Item">
+                </form>
+            </div>
+            <div class="tablelist">
+                <h2>Produce</h2>
+                <table id="grocery-list-produce" class="listtable">
+
+                </table>
+                <table id="grocery-list-dairy" class="listtable">
+
+                </table>
+                <table id="grocery-list-baking" class="listtable">
+
+                </table>
+                <table id="grocery-list-grains" class="listtable">
+
+                </table>
+                <table id="grocery-list-meat" class="listtable">
+
+                </table>
+                <table id="grocery-list-other" class="listtable">
+
+                </table>
+            </div>
+        </div>
     </main>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/grocerylistfunc.js"></script>
 </body>
+
 </html>

@@ -6,22 +6,27 @@ $(function () {
     };
 
     function createGroceryItemRow(groceryitem) {
-        return `<tr><td>${this.name}</td><td>${this.quantity}</td></tr>`
+        return `<tr><td>${groceryitem.name}</td><td>${groceryitem.quantity}</td></tr>`
     };
 
     const items = [];
     function populateGroceryTable(groceryItemArray) {
-        const $groceryTable = $('#grocery-list');
+        const $groceryTable = $('#grocery-list-produce');
         $groceryTable.html('<tr><th>Name</th><th>Quantity</th></tr>');
-        groceryItemArray.forEach(function(groceryitem) {
+        groceryItemArray.forEach(function (groceryitem) {
             $groceryTable.append(createGroceryItemRow(groceryitem));
         });
     };
 
     populateGroceryTable(items);
 
-    $('#add-item-form').on('submit', function(e) {
+    $('#add-item-form').on('submit', function (e) {
         e.preventDefault();
-        const newItem = new GroceryItem
+        const newItem = new GroceryItem($('#item-name').val(), Number($('#item-quantity').val()), $('#item-category').val());
+        items.push(newItem);
+        populateGroceryTable(items);
+        this.reset();
     });
+
+
 });

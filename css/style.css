@@ -20,9 +20,59 @@ header {
     padding: 5px;
 }
 
+h2 {
+    font-size: 2em;
+    width: 45%;
+    padding: 5px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
 body {
     text-align: center;
 }
+
+div.container {
+    display: block;
+}
+
+.div.additem {
+    margin: auto;
+}
+
+div.tablelist {
+    margin: auto;
+    padding: 2px;
+    border: 2px;
+    font-weight: bold;
+    height: 20px;
+    width: 100%;
+}
+
+.listtable {
+    width: 45%;
+    height: 100%;
+    border-radius: 5px;
+    
+}
+
+div.tablelist th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--border-color-two);
+    border: 2px;
+    border-color: var(--border-color-one);
+    border-radius: 5px;
+}
+
+div.tablelist td {
+    background-color: var(--border-color-one);
+    padding: 2px;
+
+}
+
 
 div.additem {
     border-radius: 5px;
@@ -42,7 +92,6 @@ form.itemform {
 form.itemform>input {
     width: 100%;
     border: solid;
-    font-size: larger;
     text-align: center;
 }
 
@@ -50,7 +99,7 @@ form.itemform>label {
     border: .25rem solid;
     border-radius: 5px;
     border-color: var(--border-color-two);
-    font-size: larger;
+    font-size: x-large;
     padding: 5px;
     text-align: center;
     display: block;
@@ -65,4 +114,20 @@ form>select {
     width: 100%;
     border: solid;
     font-size: larger;
+}
+
+input[type="submit"] {
+    text-align: center;
+    padding: .75em;
+    font-size: 1.1em;
+    max-height: fit-content;
+    max-width: fit-content;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-link);
+    color:var(--color-dark);
+    border-radius: 4px;
+    transition: color .2s ease-in-out,
+        background-color var(--transition-time-default) ease-in-out;
 }
